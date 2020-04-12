@@ -1,38 +1,262 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #f5f5fb;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+  font-size: 16px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.headerBox {
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(
+    63deg,
+    rgba(255, 209, 207, 1) 0%,
+    rgba(255, 227, 226, 1) 64%
+  );
+  max-width: 1300px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+h1.headerText {
+  color: #da7e85;
+  font-size: 26px;
+  font-weight: bold;
+  margin-left: 20px;
+  padding-top: 200px;
+  animation: fadein 5s;
+  margin-top: 0px;
+}
+.totalContainer {
+  display: grid;
+  grid-gap: 10px;
+  margin: 10px;
+}
+.headerPara {
+  margin-left: 20px;
+  width: 350px;
+  line-height: 1.4;
+  color: #6d6473;
+  font-size: 16px;
+  font-weight: 500;
+  animation: fadein 7s;
+  text-align: left;
+}
+.numbox {
+  width: 100%;
+  height: 100px;
+  background: #fefefe;
+  border-radius: 5px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  box-shadow: 7px 9px 23px -13px rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+.numText {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  color: #6d6473;
+  padding: 5px 0;
+}
+img.headerImg {
+  width: 300px;
+  position: absolute;
+  right: 10px;
+  z-index: 99;
+  top: 10px;
+
+  animation: fadein 5s;
+}
+
+.minCase,
+.maxCase {
+  width: 10px;
+  height: 10px;
+  left: 100px;
+  background: #a49aa7;
+  border-radius: 50px;
+  border: 2px solid white;
+  position: absolute;
+}
+.maxCase {
+  background: #6d6473;
+}
+.mapDiv {
+}
+.mapDiv path {
+  fill: #ffd1cf;
+  stroke-width: 3px;
+  stroke: white;
+  transition: fill 0.5s;
+  cursor: pointer;
+}
+.mapDiv path:hover {
+  fill: #da7e85;
+}
+.mapDetails {
   color: white;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.chart {
+  width: 100%;
+}
+svg.german {
+  width: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+p {
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.contentBoxOne {
+  padding-top: 20px;
+  margin: auto;
 }
-
-@keyframes App-logo-spin {
+@keyframes fadein {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .headerBox {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    max-width: 1300px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  .totalContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  h1.headerText {
+    font-size: 32px;
+    margin-left: 20px;
+    padding-top: 70px;
+  }
+  p.headerPara {
+    margin-left: 20px;
+  }
+  .minCase,
+  .maxCase {
+    width: 15px;
+    height: 15px;
+    left: 250px;
+  }
+  img.headerImg {
+    width: 400px;
+    right: 5px;
+    top: 15px;
+    z-index: 99;
+  }
+}
+@media screen and (min-width: 900px) {
+  .chart {
+    width: 650px;
+  }
+  p {
+    text-align: center;
+  }
+  .totalContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    max-width: 1300px;
+    margin: auto;
+  }
+
+  .numbox {
+    width: 100%;
+    max-width: 1000px;
+    height: 150px;
+    background: #fefefe;
+    margin-top: 20px;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .numText {
+    font-size: 22px;
+    color: #6d6473;
+    padding: 10px 0;
+  }
+  .App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .headerBox {
+    width: 100%;
+    height: 190px;
+    border-radius: 5px;
+    max-width: 1300px;
+    margin-top: 90px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  h1.headerText {
+    font-size: 36px;
+    margin-left: 50px;
+    padding-top: 50px;
+    animation: fadein 5s;
+  }
+  p.headerPara {
+    margin-left: 50px;
+    width: 450px;
+    font-size: 16px;
+    font-weight: 500;
+    animation: fadein 7s;
+  }
+  img.headerImg {
+    width: 500px;
+    right: 10px;
+    top: -90px;
+    z-index: 99;
+  }
+  .german {
+    width: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1300px;
+  }
+  .contentBoxOne {
+    position: relative;
+    border-radius: 5px;
+    width: 650px;
+    margin: auto;
+  }
+  .minCase,
+  .maxCase {
+    width: 20px;
+    height: 20px;
+    left: 200px;
+
+    border-radius: 50px;
+    border: 3px solid white;
+    position: absolute;
   }
 }
