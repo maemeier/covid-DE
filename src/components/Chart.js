@@ -17,8 +17,8 @@ const LineChart = () => {
       {
         label: "Weiblich",
         data: [415, 1096, 14972, 26601, 10601, 6496],
-        borderColor: ["rgb(255, 209, 207.05)"],
-        backgroundColor: ["rgb(255, 209, 207.05)"],
+        borderColor: ["rgb(255, 209, 207,0.45)"],
+        backgroundColor: ["rgb(255, 209, 207, 0.45)"],
         pointBackgroundColor: ["rgb(255, 209, 207.05))"],
         pointBorderColor: ["rgb(255, 209, 207.05))"]
       }

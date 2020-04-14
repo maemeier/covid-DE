@@ -2,11 +2,12 @@ import React from "react";
 import "../App.css";
 import CountUp from "react-countup";
 import axios from "axios";
+import NumberFormat from "react-number-format";
 
 class TotalNum extends React.Component {
   state = {
     place: [],
-    infected: [],
+    infected: "",
     deceased: [],
     infectedByRegion: [
       {
@@ -14,7 +15,8 @@ class TotalNum extends React.Component {
         infectedCount: []
       }
     ],
-    currentTime: new Date().toLocaleString()
+    currentTime: new Date().toLocaleString(),
+    profit: 300044
   };
 
   componentDidMount() {
@@ -35,16 +37,30 @@ class TotalNum extends React.Component {
 
   render() {
     const { infected, deceased } = this.state;
+
     return (
       <div className="totalContainer">
         <div className="numbox">
           <p className="numText">Fallzahlen </p>
-          <CountUp className="numText" start={100000} end={infected} />
+
+          <CountUp
+            className="numText"
+            start={10000}
+            end={infected}
+            separator=","
+            decimal=","
+          />
         </div>
         <div className="numbox">
           {" "}
           <p className="numText">Todes­fälle </p>
-          <CountUp className="numText" start={1000} end={deceased} />
+          <CountUp
+            className="numText"
+            start={1000}
+            end={deceased}
+            separator=","
+            decimal=","
+          />
         </div>
         <div className="numbox">
           {" "}
